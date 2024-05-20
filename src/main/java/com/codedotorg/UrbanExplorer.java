@@ -102,7 +102,16 @@ public class UrbanExplorer {
      * Sorts the cities in the 'cities' list based on their names.
      */
     public void sortCities() {
-        
+        int s = cities.size();
+        for (int index = 0; index < s - 1; index++) {
+            for(int index2 = 0; index2 < n - index - 1; index2++){
+                if(cities.get(index).compareto(cities.get(index + 1))) {
+                    City temp = cities.get(index);
+                    cities.set(index, cities.get(index + 1));
+                    cities.set(index + 1, temp);
+                }
+            }
+        }
 
     }
 
